@@ -1,8 +1,9 @@
 up:
-	docker-compose up -d redis postgres s3
-	yarn install --pure-lockfile
-	yarn sequelize db:migrate
-	yarn dev:watch
+	docker-compose build dev
+	docker-compose up -d
+	docker-compose exec dev yarn install --pure-lockfile
+	docker-compose exec dev yarn sequelize db:migrate
+	docker-compose exec dev yarn dev:watch
 
 build:
 	docker-compose build --pull outline

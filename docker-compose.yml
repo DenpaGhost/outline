@@ -1,5 +1,18 @@
 version: "3"
 services:
+  dev:
+    build:
+      context: ./docker/node
+      args:
+        UID: 1000
+        GID: 1000
+        USER_NAME: mimomon
+    volumes:
+      - ./:/home/mimomon/outline/
+    working_dir: /home/mimomon/outline
+    ports:
+      - 3000:3000
+    tty: true
   redis:
     image: redis
     ports:
@@ -8,7 +21,7 @@ services:
   postgres:
     image: postgres
     ports:
-      - "127.0.0.1:5532:5432"
+      - "127.0.0.1:5432:5432"
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
