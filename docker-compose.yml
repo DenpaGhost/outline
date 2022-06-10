@@ -3,10 +3,6 @@ services:
   dev:
     build:
       context: ./docker/node
-      args:
-        UID: 1000
-        GID: 1000
-        USER_NAME: mimomon
     volumes:
       - ./:/home/mimomon/outline/
     working_dir: /home/mimomon/outline
