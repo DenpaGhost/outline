@@ -15537,6 +15537,7 @@ __metadata:
     outline-icons: ^1.42.0
     oy-vey: ^0.10.0
     passport: ^0.4.1
+    passport-discord: ^0.1.4
     passport-google-oauth2: ^0.2.0
     passport-oauth2: ^1.6.1
     passport-slack-oauth2: ^1.1.0
@@ -15958,6 +15959,15 @@ __metadata:
   version: 0.1.1
   resolution: "pascalcase@npm:0.1.1"
   checksum: f83681c3c8ff75fa473a2bb2b113289952f802ff895d435edd717e7cb898b0408cbdb247117a938edcbc5d141020909846cc2b92c47213d764e2a94d2ad2b925
+  languageName: node
+  linkType: hard
+
+"passport-discord@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "passport-discord@npm:0.1.4"
+  dependencies:
+    passport-oauth2: ^1.5.0
+  checksum: 81c0a7f45dd9b5b8192e4027d87c086737c8ba763bfb7102b7da6e6d5f99ab3669d6a8a89fa314d7dcc196e63877d0fc9cf23920da805de01abd96d4930221f2
   languageName: node
   linkType: hard
 
