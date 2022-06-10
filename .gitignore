@@ -13,5 +13,5 @@ fakes3/*
 *.pem
 *.key
 *.cert
-.yarn/
-!.yarn/releases/*
+.yarn/*
+!.yarn/releases
