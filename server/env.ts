@@ -414,6 +414,18 @@ export class Environment {
     process.env.AZURE_RESOURCE_APP_ID
   );
 
+  @IsOptional()
+  @CannotUseWithout("DISCORD_CLIENT_SECRET")
+  public DISCORD_CLIENT_ID = this.toOptionalString(
+    process.env.DISCORD_CLIENT_ID ?? process.env.DISCORD_KEY
+  );
+
+  @IsOptional()
+  @CannotUseWithout("DISCORD_CLIENT_ID")
+  public DISCORD_CLIENT_SECRET = this.toOptionalString(
+    process.env.DISCORD_CLIENT_SECRET ?? process.env.DISCORD_SECRET
+  );
+
   /**
    * OICD client credentials. To enable authentication with any
    * compatible provider.
