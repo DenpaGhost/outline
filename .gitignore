@@ -8,6 +8,8 @@ stats.json
 .DS_Store
 fakes3/*
 .idea
+.vscode/
+!.vscode/settings.json
 *.pem
 *.key
 *.cert
